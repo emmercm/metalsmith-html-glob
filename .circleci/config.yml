@@ -1,8 +1,5 @@
 version: 2.1
 
-orbs:
-  codecov: codecov/codecov@1.0.4
-
 executors:
   node:
     docker:
@@ -27,8 +24,9 @@ jobs:
       - run:
           name: Run tests
           command: npm test
-      - codecov/upload:
-          file:
+      - run:
+          name: Codecov
+          command: bash <(curl -s https://codecov.io/bash)
 
   # https://circleci.com/docs/2.0/deployment-integrations/#npm
   publish:
