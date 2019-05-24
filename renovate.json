@@ -15,6 +15,7 @@
       "packageNames": [
         "assert-dir-equal",
         "jest",
+        "jest-junit",
         "metalsmith"
       ],
       "groupName": "Tests"

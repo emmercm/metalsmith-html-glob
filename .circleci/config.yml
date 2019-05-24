@@ -23,7 +23,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Run tests
-          command: npm test
+          command: npm run test:junit
+      - store_test_results
+          path: reports
       - run:
           name: Codecov
           command: bash <(curl -s https://codecov.io/bash)
