@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  codecov: codecov/codecov@1.0.4
+
 executors:
   node:
     docker:
@@ -17,13 +20,15 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
       - run: npm install
-      - run:
-          name: Run tests
-          command: npm test
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Run tests
+          command: npm test
+      - codecov/upload:
+          file:
 
   # https://circleci.com/docs/2.0/deployment-integrations/#npm
   publish:
