@@ -1,5 +1,7 @@
 # metalsmith-html-glob
 
+**⚠️ This repistory has been moved to [metalsmith-plugins](https://github.com/emmercm/metalsmith-plugins/tree/main/packages/metalsmith-html-glob). ⚠️**
+
 [![npm Version](https://badgen.net/npm/v/metalsmith-html-glob?icon=npm)](https://www.npmjs.com/package/metalsmith-html-glob)
 [![npm Weekly Downloads](https://badgen.net/npm/dw/metalsmith-html-glob)](https://www.npmjs.com/package/metalsmith-html-glob)
 
